@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import { X } from "lucide-react";
 
 const images = [
-  "/lovable-uploads/dfcd02ed-2963-4663-afed-5b88e0164295.png",
+  "/lovable-uploads/8c1d2eed-b73d-48de-98be-57f99dde491c.png",
   "/lovable-uploads/ccff6f2d-ef98-4c7f-8728-35bc6c49c384.png",
 ];
 
