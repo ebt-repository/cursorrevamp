@@ -33,13 +33,13 @@ const Project = () => {
             />
             <button
               onClick={previousImage}
-              className="absolute left-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-black/10 hover:bg-black/20 text-white p-4"
+              className="absolute left-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-2xl text-foreground/50 hover:text-foreground"
             >
               ←
             </button>
             <button
               onClick={nextImage}
-              className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-black/10 hover:bg-black/20 text-white p-4"
+              className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-2xl text-foreground/50 hover:text-foreground"
             >
               →
             </button>
@@ -48,10 +48,10 @@ const Project = () => {
       </main>
 
       {showFullscreen && (
-        <div className="fixed inset-0 bg-black z-50 flex items-center justify-center">
+        <div className="fixed inset-0 bg-background z-50 flex items-center justify-center">
           <button
             onClick={() => setShowFullscreen(false)}
-            className="absolute top-4 right-4 text-white hover:opacity-70 transition-opacity"
+            className="absolute top-4 right-4 text-foreground hover:opacity-70 transition-opacity"
           >
             <X size={24} />
           </button>
