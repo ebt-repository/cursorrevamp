@@ -33,15 +33,15 @@ const Project = () => {
             />
             <button
               onClick={previousImage}
-              className="absolute left-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-2xl text-foreground/50 hover:text-foreground"
+              className="absolute left-0 top-1/2 -translate-y-1/2 px-8 opacity-0 group-hover:opacity-100 transition-opacity text-2xl text-foreground/50 hover:text-foreground"
             >
-              ←
+              ‹
             </button>
             <button
               onClick={nextImage}
-              className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-2xl text-foreground/50 hover:text-foreground"
+              className="absolute right-0 top-1/2 -translate-y-1/2 px-8 opacity-0 group-hover:opacity-100 transition-opacity text-2xl text-foreground/50 hover:text-foreground"
             >
-              →
+              ›
             </button>
           </div>
         </div>
