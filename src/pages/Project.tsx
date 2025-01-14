@@ -4,7 +4,6 @@ import { X } from "lucide-react";
 
 const images = [
   "/lovable-uploads/8c1d2eed-b73d-48de-98be-57f99dde491c.png",
-  "/lovable-uploads/ccff6f2d-ef98-4c7f-8728-35bc6c49c384.png",
 ];
 
 const Project = () => {
