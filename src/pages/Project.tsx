@@ -1,13 +1,6 @@
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
-import { X } from "lucide-react";
-import { useNavigate } from "react-router-dom";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
   "/lovable-uploads/01_B_IS_THE_B.jpg",
@@ -69,43 +62,58 @@ const images = [
 ];
 
 const Project = () => {
-  const navigate = useNavigate();
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [direction, setDirection] = useState<'left' | 'right'>('right');
+
+  const goToNextImage = () => {
+    setDirection('right');
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const goToPreviousImage = () => {
+    setDirection('left');
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
 
   return (
-    <div className="min-h-screen bg-black">
-      <button
-        onClick={() => navigate("/")}
-        className="fixed top-8 right-8 z-50 p-2 text-white hover:opacity-70 transition-opacity"
-        aria-label="Close gallery"
-      >
-        <X className="w-6 h-6" />
-      </button>
+    <div className="min-h-screen flex flex-col">
+      <Navigation />
+      <main className="flex-1 flex items-center justify-center px-8 py-12">
+        <div className="relative w-full max-w-4xl aspect-square">
+          <img
+            key={currentImageIndex}
+            src={images[currentImageIndex]}
+            alt={`Image ${currentImageIndex + 1}`}
+            className="w-full h-full object-contain"
+          />
+          
+          <button
+            onClick={goToPreviousImage}
+            className="absolute left-4 top-1/2 -translate-y-1/2 p-2 hover:opacity-70 transition-opacity"
+            aria-label="Previous image"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          
+          <button
+            onClick={goToNextImage}
+            className="absolute right-4 top-1/2 -translate-y-1/2 p-2 hover:opacity-70 transition-opacity"
+            aria-label="Next image"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
 
-      <div className="h-screen flex items-center justify-center px-16">
-        <Carousel
-          opts={{
-            loop: true,
-            align: "center",
-          }}
-          className="w-full max-w-5xl"
-        >
-          <CarouselContent>
-            {images.map((src, index) => (
-              <CarouselItem key={index}>
-                <div className="relative aspect-[3/2] w-full">
-                  <img
-                    src={src}
-                    alt={`Slide ${index + 1}`}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="left-4 bg-transparent border-none hover:bg-transparent text-white" />
-          <CarouselNext className="right-4 bg-transparent border-none hover:bg-transparent text-white" />
-        </Carousel>
-      </div>
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
+            <p className="text-sm opacity-50">
+              {currentImageIndex + 1} / {images.length}
+            </p>
+          </div>
+        </div>
+      </main>
     </div>
   );
 };
