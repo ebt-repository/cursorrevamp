@@ -19,27 +19,30 @@ const Project = () => {
     setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
   };
 
+  const imageClassName = "max-w-[90%] h-[80vh] object-contain mx-auto";
+  const arrowClassName = "text-[2.8rem] hover:opacity-70 transition-opacity"; // Increased size by 40%
+
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="pt-24 px-8">
+      <main className="pt-24 px-4">
         <div className="max-w-7xl mx-auto relative">
           <div className="relative group">
             <img
               src={images[currentImage]}
               alt={`Artwork ${currentImage + 1}`}
-              className="w-full h-[calc(100vh-8rem)] object-contain cursor-pointer mx-auto"
+              className={imageClassName}
               onClick={() => setShowFullscreen(true)}
             />
             <button
               onClick={previousImage}
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-2xl opacity-0 group-hover:opacity-100 transition-opacity"
+              className={`absolute left-2 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity ${arrowClassName}`}
             >
               ‹
             </button>
             <button
               onClick={nextImage}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-2xl opacity-0 group-hover:opacity-100 transition-opacity"
+              className={`absolute right-2 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity ${arrowClassName}`}
             >
               ›
             </button>
@@ -58,17 +61,17 @@ const Project = () => {
           <img
             src={images[currentImage]}
             alt={`Artwork ${currentImage + 1}`}
-            className="w-full h-[calc(100vh-8rem)] object-contain mx-auto"
+            className={imageClassName}
           />
           <button
             onClick={previousImage}
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-2xl"
+            className={`absolute left-2 top-1/2 -translate-y-1/2 ${arrowClassName}`}
           >
             ‹
           </button>
           <button
             onClick={nextImage}
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-2xl"
+            className={`absolute right-2 top-1/2 -translate-y-1/2 ${arrowClassName}`}
           >
             ›
           </button>
