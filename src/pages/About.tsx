@@ -2,16 +2,14 @@ import Navigation from "@/components/Navigation";
 
 const About = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Navigation />
-      <main className="pt-24 px-8">
-        <div className="max-w-2xl mx-auto space-y-16">
+      <main className="flex-1 px-8 py-16">
+        <div className="max-w-2xl mx-auto space-y-12">
           <section>
-            <h2 className="text-lg mb-8">About the project</h2>
+            <h2 className="text-lg mb-6">About the project</h2>
             <div className="space-y-4 leading-relaxed">
-              <p>
-                BEAUTY IS THE BOT
-              </p>
+              <p>BEAUTY IS THE BOT</p>
               <p>
                 This project is the result of collaboration between Midjourney (Artificial Intelligence) and myself (human, artist).
               </p>
@@ -38,7 +36,7 @@ const About = () => {
           </section>
           
           <section>
-            <h2 className="text-lg mb-8">Contact</h2>
+            <h2 className="text-lg mb-6">Contact</h2>
             <div className="space-y-2">
               <p>
                 <a href="mailto:contact@ebt.art" className="hover:opacity-70 transition-opacity">

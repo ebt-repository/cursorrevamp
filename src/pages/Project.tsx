@@ -28,18 +28,18 @@ const Project = () => {
             <img
               src={images[currentImage]}
               alt={`Artwork ${currentImage + 1}`}
-              className="w-full h-[calc(100vh-8rem)] object-contain cursor-pointer"
+              className="w-full h-[calc(100vh-8rem)] object-contain cursor-pointer mx-auto"
               onClick={() => setShowFullscreen(true)}
             />
             <button
               onClick={previousImage}
-              className="absolute left-0 top-1/2 -translate-y-1/2 px-8 opacity-0 group-hover:opacity-100 transition-opacity text-2xl text-foreground/50 hover:text-foreground"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-2xl opacity-0 group-hover:opacity-100 transition-opacity"
             >
               ‹
             </button>
             <button
               onClick={nextImage}
-              className="absolute right-0 top-1/2 -translate-y-1/2 px-8 opacity-0 group-hover:opacity-100 transition-opacity text-2xl text-foreground/50 hover:text-foreground"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-2xl opacity-0 group-hover:opacity-100 transition-opacity"
             >
               ›
             </button>
@@ -58,8 +58,20 @@ const Project = () => {
           <img
             src={images[currentImage]}
             alt={`Artwork ${currentImage + 1}`}
-            className="max-w-full max-h-full object-contain"
+            className="w-full h-[calc(100vh-8rem)] object-contain mx-auto"
           />
+          <button
+            onClick={previousImage}
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-2xl"
+          >
+            ‹
+          </button>
+          <button
+            onClick={nextImage}
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-2xl"
+          >
+            ›
+          </button>
         </div>
       )}
     </div>
