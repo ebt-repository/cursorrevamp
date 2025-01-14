@@ -48,6 +48,17 @@
   }
 }
 
+/* Custom styles for the carousel navigation */
+.embla__button {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.embla:hover .embla__button {
+  opacity: 1;
+}
+
+/* Keep existing animations */
 .slide-enter {
   opacity: 0;
   transform: translateX(100%);
