@@ -77,7 +77,7 @@ const Project = () => {
     <div className="min-h-screen">
       <Navigation />
       <main className="h-[calc(100vh-96px)] flex items-center justify-center px-4">
-        <div className="max-w-[90vw] mt-[96px]">
+        <div className="max-w-[90vw] mt-[47px]">
           <img
             src={images[currentImage]}
             alt={`Artwork ${currentImage + 1}`}
@@ -96,7 +96,7 @@ const Project = () => {
           >
             <X className="h-8 w-8" />
           </button>
-          <div className="relative flex items-center justify-center w-full px-24 mt-[96px]">
+          <div className="relative flex items-center justify-center w-full px-24">
             <img
               src={images[currentImage]}
               alt={`Artwork ${currentImage + 1}`}
