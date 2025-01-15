@@ -77,7 +77,7 @@ const Project = () => {
     <div className="min-h-screen">
       <Navigation />
       <main className="h-[calc(100vh-96px)] flex items-center justify-center px-4">
-        <div className="max-w-[90vw]">
+        <div className="max-w-[90vw] mt-[47px]">
           <img
             src={images[currentImage]}
             alt={`Artwork ${currentImage + 1}`}
