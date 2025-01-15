@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
-import { X, ArrowLeft, ArrowRight } from "lucide-react";
+import { X } from "lucide-react";
 
 const images = [
   "/lovable-uploads/01_B_IS_THE_B.jpg",
@@ -77,29 +77,13 @@ const Project = () => {
     <div className="min-h-screen">
       <Navigation />
       <main className="pt-24 px-4">
-        <div className="max-w-[90vw] mx-auto relative">
-          <div className="relative group flex items-center justify-center">
-            <img
-              src={images[currentImage]}
-              alt={`Artwork ${currentImage + 1}`}
-              className="max-h-[80vh] w-auto object-contain cursor-pointer"
-              onClick={() => setShowFullscreen(true)}
-            />
-            <button
-              onClick={previousImage}
-              className="absolute -left-16 top-1/2 -translate-y-1/2 p-2 opacity-0 group-hover:opacity-100 transition-opacity"
-              aria-label="Previous image"
-            >
-              <ArrowLeft className="h-8 w-8" />
-            </button>
-            <button
-              onClick={nextImage}
-              className="absolute -right-16 top-1/2 -translate-y-1/2 p-2 opacity-0 group-hover:opacity-100 transition-opacity"
-              aria-label="Next image"
-            >
-              <ArrowRight className="h-8 w-8" />
-            </button>
-          </div>
+        <div className="max-w-[90vw] mx-auto">
+          <img
+            src={images[currentImage]}
+            alt={`Artwork ${currentImage + 1}`}
+            className="max-h-[80vh] w-auto mx-auto object-contain cursor-pointer"
+            onClick={() => setShowFullscreen(true)}
+          />
         </div>
       </main>
 
@@ -107,12 +91,12 @@ const Project = () => {
         <div className="fixed inset-0 bg-background z-50 flex items-center justify-center">
           <button
             onClick={() => setShowFullscreen(false)}
-            className="absolute top-4 right-4 text-foreground hover:opacity-70 transition-opacity"
+            className="absolute top-8 right-8 text-[#8C8C8C] hover:text-foreground transition-colors"
             aria-label="Close fullscreen"
           >
             <X className="h-8 w-8" />
           </button>
-          <div className="relative flex items-center justify-center w-full">
+          <div className="relative flex items-center justify-center w-full px-24">
             <img
               src={images[currentImage]}
               alt={`Artwork ${currentImage + 1}`}
@@ -120,17 +104,17 @@ const Project = () => {
             />
             <button
               onClick={previousImage}
-              className="absolute left-4 top-1/2 -translate-y-1/2 p-2"
+              className="absolute left-8 text-[#8C8C8C] hover:text-foreground transition-colors text-4xl font-light"
               aria-label="Previous image"
             >
-              <ArrowLeft className="h-8 w-8" />
+              {"<"}
             </button>
             <button
               onClick={nextImage}
-              className="absolute right-4 top-1/2 -translate-y-1/2 p-2"
+              className="absolute right-8 text-[#8C8C8C] hover:text-foreground transition-colors text-4xl font-light"
               aria-label="Next image"
             >
-              <ArrowRight className="h-8 w-8" />
+              {">"}
             </button>
           </div>
         </div>
