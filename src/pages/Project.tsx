@@ -96,10 +96,10 @@ const Project = () => {
         <div className="fixed inset-0 bg-background z-50 flex items-center justify-center">
           <button
             onClick={handleCloseFullscreen}
-            className="absolute top-8 right-8 text-[#8C8C8C] hover:text-foreground transition-colors"
+            className="absolute top-8 right-8 text-[#999999] hover:text-foreground transition-colors"
             aria-label="Close fullscreen"
           >
-            <X className="h-8 w-8" />
+            <X className="h-[27.52px] w-[27.52px]" />
           </button>
           <div className="relative flex items-center justify-center w-full px-24">
             <img
@@ -109,14 +109,14 @@ const Project = () => {
             />
             <button
               onClick={previousImage}
-              className="absolute left-8 text-[#8C8C8C] hover:text-foreground transition-colors text-4xl font-light"
+              className="absolute left-8 text-[#999999] hover:text-foreground transition-colors text-4xl font-light"
               aria-label="Previous image"
             >
               {"<"}
             </button>
             <button
               onClick={nextImage}
-              className="absolute right-8 text-[#8C8C8C] hover:text-foreground transition-colors text-4xl font-light"
+              className="absolute right-8 text-[#999999] hover:text-foreground transition-colors text-4xl font-light"
               aria-label="Next image"
             >
               {">"}
