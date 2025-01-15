@@ -73,6 +73,11 @@ const Project = () => {
     setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
   };
 
+  const handleCloseFullscreen = () => {
+    setShowFullscreen(false);
+    setCurrentImage(0); // Reset to first image when closing fullscreen
+  };
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -90,7 +95,7 @@ const Project = () => {
       {showFullscreen && (
         <div className="fixed inset-0 bg-background z-50 flex items-center justify-center">
           <button
-            onClick={() => setShowFullscreen(false)}
+            onClick={handleCloseFullscreen}
             className="absolute top-8 right-8 text-[#8C8C8C] hover:text-foreground transition-colors"
             aria-label="Close fullscreen"
           >
