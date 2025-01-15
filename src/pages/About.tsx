@@ -39,17 +39,17 @@ const About = () => {
             <h2 className="text-lg mb-4">Contact</h2>
             <div className="space-y-1.5">
               <p>
-                <a href="mailto:contact@ebt.art" className="hover:opacity-70 transition-opacity">
-                  contact@ebt.art
+                <a href="mailto:torz@free.fr" className="hover:opacity-70 transition-opacity">
+                  torz@free.fr
                 </a>
               </p>
               <p>
-                <a href="https://instagram.com/ebt.art" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+                <a href="https://www.instagram.com/edgarbecourttorz/" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
                   Instagram
                 </a>
               </p>
               <p>
-                <a href="https://x.com/ebt_art" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+                <a href="https://x.com/EdgarBTorz" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
                   X
                 </a>
               </p>
