@@ -22,22 +22,38 @@ export const FullscreenView = ({
       >
         <X className="h-[20px] w-[20px] sm:h-[27.52px] sm:w-[27.52px]" />
       </button>
-      <div className="relative flex items-center justify-center w-full px-8 sm:px-24">
+      <div className="relative flex flex-col sm:block items-center justify-center w-full px-8 sm:px-24">
         <img
           src={currentImage}
           alt="Fullscreen artwork"
           className="max-h-[85vh] sm:max-h-screen w-auto object-contain"
         />
+        <div className="flex justify-center gap-4 mt-6 sm:hidden">
+          <button
+            onClick={onPrevious}
+            className="text-[#999999] hover:text-foreground transition-colors text-3xl font-light"
+            aria-label="Previous image"
+          >
+            {"<"}
+          </button>
+          <button
+            onClick={onNext}
+            className="text-[#999999] hover:text-foreground transition-colors text-3xl font-light"
+            aria-label="Next image"
+          >
+            {">"}
+          </button>
+        </div>
         <button
           onClick={onPrevious}
-          className="absolute left-2 sm:left-8 text-[#999999] hover:text-foreground transition-colors text-3xl sm:text-4xl font-light p-4 sm:p-0"
+          className="hidden sm:block absolute left-8 text-[#999999] hover:text-foreground transition-colors text-4xl font-light"
           aria-label="Previous image"
         >
           {"<"}
         </button>
         <button
           onClick={onNext}
-          className="absolute right-2 sm:right-8 text-[#999999] hover:text-foreground transition-colors text-3xl sm:text-4xl font-light p-4 sm:p-0"
+          className="hidden sm:block absolute right-8 text-[#999999] hover:text-foreground transition-colors text-4xl font-light"
           aria-label="Next image"
         >
           {">"}
