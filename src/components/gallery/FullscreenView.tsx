@@ -17,7 +17,7 @@ export const FullscreenView = ({
     <div className="fixed inset-0 bg-background z-50 flex items-center justify-center">
       <button
         onClick={onClose}
-        className="absolute top-4 sm:top-8 right-4 sm:right-8 text-[#999999] hover:text-foreground transition-colors"
+        className="absolute top-4 sm:top-8 right-4 sm:right-8 text-[#999999] hover:text-foreground transition-colors z-50"
         aria-label="Close fullscreen"
       >
         <X className="h-[20px] w-[20px] sm:h-[27.52px] sm:w-[27.52px]" />

@@ -26,8 +26,8 @@ const Project = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="flex flex-col items-center justify-center px-2 sm:px-4">
-        <div className="max-w-[95vw] sm:max-w-[90vw] mt-[47px] relative">
+      <main className="h-[calc(100vh-96px)] flex items-center justify-center px-2 sm:px-4">
+        <div className="max-w-[95vw] sm:max-w-[90vw] relative flex flex-col items-center">
           <GalleryImage
             src={galleryImages[currentImage]}
             index={currentImage}
