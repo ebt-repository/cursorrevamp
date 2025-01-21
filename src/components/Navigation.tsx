@@ -6,7 +6,7 @@ const Navigation = () => {
   return (
     <nav className="w-full px-4 sm:px-8 py-4 sm:py-6 flex items-center fixed top-0 left-0 bg-background/90 backdrop-blur-sm z-50 space-x-4 sm:space-x-8">
       <Link to="/" className="text-sm sm:text-base hover:opacity-70 transition-opacity">
-        edgar-becourt-torz.com
+        ebt
       </Link>
       <div className="flex items-center space-x-4 sm:space-x-8">
         <Link 
