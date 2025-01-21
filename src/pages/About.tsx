@@ -48,11 +48,6 @@ const About = () => {
                   Instagram
                 </a>
               </p>
-              <p>
-                <a href="https://x.com/EdgarBTorz" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
-                  X
-                </a>
-              </p>
             </div>
           </section>
         </div>
