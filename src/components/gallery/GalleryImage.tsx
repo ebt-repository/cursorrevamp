@@ -9,7 +9,7 @@ export const GalleryImage = ({ src, index, onClick }: GalleryImageProps) => {
     <img
       src={src}
       alt={`Artwork ${index + 1}`}
-      className="max-h-[80vh] w-auto mx-auto object-contain cursor-pointer mt-[20px]"
+      className="max-h-[75vh] sm:max-h-[80vh] w-auto mx-auto object-contain cursor-pointer mt-[20px]"
       onClick={onClick}
     />
   );

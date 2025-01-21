@@ -18,14 +18,14 @@ const Project = () => {
 
   const handleCloseFullscreen = () => {
     setShowFullscreen(false);
-    setCurrentImage(0); // Reset to first image when closing fullscreen
+    setCurrentImage(0);
   };
 
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="h-[calc(100vh-96px)] flex items-center justify-center px-4">
-        <div className="max-w-[90vw] mt-[47px]">
+      <main className="h-[calc(100vh-96px)] flex items-center justify-center px-2 sm:px-4">
+        <div className="max-w-[95vw] sm:max-w-[90vw] mt-[47px]">
           <GalleryImage
             src={galleryImages[currentImage]}
             index={currentImage}
