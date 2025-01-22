@@ -14,50 +14,56 @@ export const FullscreenView = ({
   onPrevious,
 }: FullscreenViewProps) => {
   return (
-    <div className="fixed inset-0 bg-background z-50 flex items-center justify-center">
+    <div className="fixed inset-0 bg-background z-50 flex flex-col">
       <button
         onClick={onClose}
-        className="absolute top-4 sm:top-8 right-4 sm:right-8 text-[#999999] hover:text-foreground transition-colors z-50"
-        aria-label="Close fullscreen"
+        className="absolute right-4 top-4 z-10 text-foreground"
+        aria-label="Close fullscreen view"
       >
         <X className="h-[20px] w-[20px] sm:h-[27.52px] sm:w-[27.52px]" />
       </button>
-      <div className="relative flex flex-col sm:block items-center justify-center w-full px-8 sm:px-24">
-        <img
-          src={currentImage}
-          alt="Fullscreen artwork"
-          className="max-h-[85vh] sm:max-h-screen w-auto object-contain"
-        />
-        <div className="flex justify-center gap-4 mt-6 sm:hidden">
+      <div className="h-full flex items-center justify-center">
+        <div className="relative flex flex-col sm:flex-row items-center justify-center w-full px-8 sm:px-24">
+          <img
+            src={currentImage}
+            alt="Fullscreen artwork"
+            className="max-h-[85vh] sm:max-h-screen w-auto object-contain"
+          />
+          
+          {/* Mobile Navigation */}
+          <div className="flex justify-center gap-4 mt-6 sm:hidden">
+            <button
+              onClick={onPrevious}
+              className="text-[#999999] hover:text-foreground transition-colors text-3xl font-light"
+              aria-label="Previous image"
+            >
+              {"<"}
+            </button>
+            <button
+              onClick={onNext}
+              className="text-[#999999] hover:text-foreground transition-colors text-3xl font-light"
+              aria-label="Next image"
+            >
+              {">"}
+            </button>
+          </div>
+          
+          {/* Desktop Navigation */}
           <button
             onClick={onPrevious}
-            className="text-[#999999] hover:text-foreground transition-colors text-3xl font-light"
+            className="hidden sm:block absolute left-8 text-[#999999] hover:text-foreground transition-colors text-4xl font-light"
             aria-label="Previous image"
           >
             {"<"}
           </button>
           <button
             onClick={onNext}
-            className="text-[#999999] hover:text-foreground transition-colors text-3xl font-light"
+            className="hidden sm:block absolute right-8 text-[#999999] hover:text-foreground transition-colors text-4xl font-light"
             aria-label="Next image"
           >
             {">"}
           </button>
         </div>
-        <button
-          onClick={onPrevious}
-          className="hidden sm:block absolute left-8 text-[#999999] hover:text-foreground transition-colors text-4xl font-light"
-          aria-label="Previous image"
-        >
-          {"<"}
-        </button>
-        <button
-          onClick={onNext}
-          className="hidden sm:block absolute right-8 text-[#999999] hover:text-foreground transition-colors text-4xl font-light"
-          aria-label="Next image"
-        >
-          {">"}
-        </button>
       </div>
     </div>
   );
