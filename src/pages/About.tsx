@@ -7,8 +7,7 @@ const About = () => {
       <main className="flex-1 px-8 py-12">
         <div className="max-w-2xl mx-auto space-y-8">
           <section>
-            <h2 className="text-lg mb-4">About the project</h2>
-            <div className="space-y-3 leading-snug tracking-tight">
+            <div className="space-y-3 leading-snug tracking-tight text-sm md:text-base md:tracking-normal">
               <p>BEAUTY IS THE BOT</p>
               <p>
                 This project is the result of collaboration between Midjourney (Artificial Intelligence) and myself (human, artist).
