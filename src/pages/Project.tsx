@@ -36,20 +36,22 @@ const Project = () => {
           
           {/* Mobile Navigation */}
           <div className="flex justify-center gap-4 mt-6 mb-8 sm:hidden">
-            <button
+            <Button
+              variant="outline"
+              size="icon"
               onClick={previousImage}
-              className="text-[#999999] hover:text-foreground transition-colors text-3xl font-light"
-              aria-label="Previous image"
+              className="h-8 w-8"
             >
-              {"<"}
-            </button>
-            <button
+              <ChevronLeft className="h-4 w-4" />
+            </Button>
+            <Button
+              variant="outline"
+              size="icon"
               onClick={nextImage}
-              className="text-[#999999] hover:text-foreground transition-colors text-3xl font-light"
-              aria-label="Next image"
+              className="h-8 w-8"
             >
-              {">"}
-            </button>
+              <ChevronRight className="h-4 w-4" />
+            </Button>
           </div>
         </div>
       </main>
