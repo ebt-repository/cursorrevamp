@@ -69,7 +69,7 @@ const SlideShow = ({ images, initialIndex = 0, onClose }: SlideShowProps) => {
       <div className="relative w-full h-full flex items-center justify-center px-12">
         <button 
           onClick={handlePrevious}
-          className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center bg-white/80 rounded-full shadow-md z-50"
+          className="absolute md:left-2 left-0 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center md:bg-white/80 md:rounded-full text-2xl md:text-base z-50 text-black/60 md:text-black"
           aria-label="Previous image"
         >
           ‹
@@ -83,7 +83,7 @@ const SlideShow = ({ images, initialIndex = 0, onClose }: SlideShowProps) => {
 
         <button 
           onClick={handleNext}
-          className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center bg-white/80 rounded-full shadow-md z-50"
+          className="absolute md:right-2 right-0 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center md:bg-white/80 md:rounded-full text-2xl md:text-base z-50 text-black/60 md:text-black"
           aria-label="Next image"
         >
           ›

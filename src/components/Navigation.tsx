@@ -15,13 +15,13 @@ const Navigation = () => {
         </Link>
         <Link 
           to="/project" 
-          className={isActive('/project') ? 'text-gray-500' : 'text-black hover:text-gray-500'}
+          className={isActive('/project') ? 'text-black' : 'text-gray-500 hover:text-black'}
         >
           project
         </Link>
         <Link 
           to="/about" 
-          className={isActive('/about') ? 'text-gray-500' : 'text-black hover:text-gray-500'}
+          className={isActive('/about') ? 'text-black' : 'text-gray-500 hover:text-black'}
         >
           about
         </Link>
