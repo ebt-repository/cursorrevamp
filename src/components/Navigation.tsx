@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 
+// Navigation component with active page highlighting
 const Navigation = () => {
   const location = useLocation();
   const isActive = (path: string) => location.pathname === path;
